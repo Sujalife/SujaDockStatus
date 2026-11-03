@@ -12,6 +12,8 @@ The dock board and hub support icon/card and list views. The interface shows the
 
 Both apps use the live Firebase workspace only. Old sample sessions are retired automatically; unconfirmed docks remain unconfirmed until an authorized update.
 
+Personal alert preferences are available from your account or Messages → Preferences. Choose dock statuses and team, role, or direct messages independently. The inbox and unread count follow your choices; the dock board and history remain complete. Version 2.1 rules in the hub enable account sync; UID-scoped device choices work while sync is unavailable. Phone layouts keep dock cards compact and editing actions visible.
+
 Set Settings → Pages → Source → GitHub Actions to publish the frontend. Pages publication does not publish Firebase rules.
 
 Shared source changes belong in SujaLifeTools and should be exported to this repository together. Native-generated artwork and the existing Suja light/dark palette are preserved.
