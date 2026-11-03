@@ -1,0 +1,11 @@
+{
+  "name": "suja-dock-status",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check dist/shared/app.js && node --check dist/shared/platform.js",
+    "test": "node --check dist/shared/platform.js",
+    "build": "node scripts/build.mjs"
+  }
+}
