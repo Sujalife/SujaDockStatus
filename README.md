@@ -2,12 +2,16 @@
 
 Standalone frontend for docks 16–19, sharing accounts, roles, messages, and themes with [Suja Life Tools](https://github.com/Sujalife/SujaLifeTools).
 
-**Firebase web app configuration is included; live backend activation remains pending.** Open Explore demo for explicitly labeled browser-only sample data.
+This version uses **direct Firebase Authentication and Realtime Database access protected by rules**. Core operation requires no Cloud Functions deployment or Blaze upgrade. Firebase's service limits still apply.
 
-The authoritative shared backend, rules, setup instructions, and tests are in SujaLifeTools. This export never deploys a separate backend.
+The supplied public Firebase configuration is included. **Live activation still requires the matching version 2 rules and the owner UID at toolsV2/config/masterUid.** The authoritative rules, setup instructions, and tests are maintained in [SujaLifeTools](https://github.com/Sujalife/SujaLifeTools/blob/main/SETUP.md). This export does not deploy a separate backend or maintain a second rules copy.
 
-Set Settings → Pages → Source → GitHub Actions to publish the frontend. The workflow verifies assets and JavaScript syntax. Deployment does not activate Firebase.
+Use Create account to make a pending identity and copy its UID. Only a Firebase project administrator can pin Master in the Console; the first visitor never becomes Master automatically. The Master approves other accounts and assigns roles. Both repository paths on sujalife.github.io share Firebase authentication persistence.
 
-The supplied public Firebase config is included in dist/shared/config.js. Authentication, backend functions, rules, and the Master account still require activation in the authoritative hub project. Both repository paths on sujalife.github.io share Firebase authentication persistence.
+The dock board and hub support icon/card and list views. The interface shows the last 72 hours of history and messages; authorized open apps clean up expired entries while active. Physical deletion is not guaranteed while every browser is closed, and current dock status is retained.
 
-Built with native-generated art and the existing Suja light/dark palette.
+Choose Explore demo for labeled browser-only sample data. Demo updates never write to Firebase.
+
+Set Settings → Pages → Source → GitHub Actions to publish the frontend. Pages publication does not publish Firebase rules.
+
+Shared source changes belong in SujaLifeTools and should be exported to this repository together. Native-generated artwork and the existing Suja light/dark palette are preserved.
