@@ -10,7 +10,7 @@ Use Create account to make a pending identity and copy its UID. Only a Firebase 
 
 The dock board and hub support icon/card and list views. The interface shows the last 72 hours of history and messages; authorized open apps clean up expired entries while active. Physical deletion is not guaranteed while every browser is closed, and current dock status is retained.
 
-Choose Explore demo for labeled browser-only sample data. Demo updates never write to Firebase.
+Both apps use the live Firebase workspace only. Old sample sessions are retired automatically; unconfirmed docks remain unconfirmed until an authorized update.
 
 Set Settings → Pages → Source → GitHub Actions to publish the frontend. Pages publication does not publish Firebase rules.
 
